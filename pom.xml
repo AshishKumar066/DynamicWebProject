@@ -19,7 +19,6 @@
 		</dependency>
 
 	</dependencies>
-
 	<build>
 		<plugins>
 
