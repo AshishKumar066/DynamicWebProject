@@ -8,13 +8,20 @@
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
         http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd">
 
-	<!-- DispatcherServlet Context: defines this servlet's request-processing infrastructure -->
-
-	<!-- Scans within the base package of the application for @Components to configure as beans -->
-	<!-- @Controller, @Service, @Configuration, etc. -->
-	<context:component-scan base-package="sample.webmvc" />
-
-	<!-- Enables the Spring MVC @Controller programming model -->
+	<context:component-scan
+		base-package="sample.webmvc" />
 	<mvc:annotation-driven />
+
+
+	<bean name="viewResolver"
+		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="prefix" value="/WEB-INF/JSP/" />
+		<property name="suffix" value=".jsp" />
+
+	</bean>
+
+
+
+
 
 </beans>  

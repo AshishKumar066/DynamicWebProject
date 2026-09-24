@@ -5,13 +5,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
-public class UserController {
+public class UserController3 {
 
 	@ResponseBody
-	@RequestMapping("/")
-	public String greet() {
-		return "Hey User !";
+	@RequestMapping("/footwear")
+	public String footWear() {
+
+		return "Hey User it's your footwear page !";
 	}
+
 }
-
-

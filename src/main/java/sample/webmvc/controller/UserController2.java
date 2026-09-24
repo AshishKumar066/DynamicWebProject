@@ -5,13 +5,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
-public class UserController {
+public class UserController2 {
 
 	@ResponseBody
-	@RequestMapping("/")
-	public String greet() {
-		return "Hey User !";
+	@RequestMapping("/Welcome")
+	public String welcome() {
+		return "Welcome to my First web Page !";
 	}
 }
-
-
