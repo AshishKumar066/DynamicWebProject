@@ -10,16 +10,17 @@ import org.springframework.web.servlet.view.JstlView;
 
 
 @EnableWebMvc
-@ComponentScan(basePackages="saama")
+@ComponentScan(basePackages="sample.webmvc")
 @Configuration
 public class SpringConfig { 
+	
 	
 	@Bean
 	public ViewResolver viewResolver() {
 		InternalResourceViewResolver viewResolver = new InternalResourceViewResolver();
-		
+
 		viewResolver.setViewClass(JstlView.class);
-		viewResolver.setPrefix("/WEB-INF/jsp/");
+		viewResolver.setPrefix("/WEB-INF/JSP/");
 		viewResolver.setSuffix(".jsp");
 				
 		return viewResolver;	

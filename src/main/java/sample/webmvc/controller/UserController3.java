@@ -1,17 +1,28 @@
 package sample.webmvc.controller;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
+@RequestMapping("/kitchen")
 public class UserController3 {
 
-	@ResponseBody
-	@RequestMapping("/footwear")
-	public String footWear() {
+	@RequestMapping("/")
+	public String greet() {
+		System.out.println("UserController.greet()");
+		return "kitchen";
 
-		return "Hey User it's your footwear page !";
+	}
+
+//	/WEB-INF/JSP/welcome.jsp
+
+//	@RequestMapping(value =  "/movies" ,method = RequestMethod.GET)
+	@GetMapping(value = { "/movies", "/films" })
+	public String movie() {
+		System.out.println("UserController.movie()");
+		return "movies";
+
 	}
 
 }
