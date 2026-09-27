@@ -7,10 +7,10 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
 @ResponseBody
-@RequestMapping("/rlectronics")
+@RequestMapping("/home")
 public class UserController {
 
-	@RequestMapping("/")
+	@RequestMapping({ "", "/" })
 	public String greet() {
 		System.out.println("UserController.greet()");
 		return "Hey User !";

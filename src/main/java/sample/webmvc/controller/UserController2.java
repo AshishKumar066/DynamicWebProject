@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("/footwear")
 public class UserController2 {
 	
-	@RequestMapping("/")
+	@RequestMapping({ "", "/" })
 	public String greet() {
 		System.out.println("UserController.greet()");
 		return "footwear";
